@@ -23,6 +23,7 @@ export const site = {
     {
       id: 1,
       title: "Mantenimiento de Instalaciones Edilicias",
+      image: "/cooling.jpg",
       desc: "Servicio integral de mantenimiento preventivo y correctivo para garantizar el funcionamiento seguro, eficiente y duradero de todas las instalaciones del edificio.",
       features: [
         { name: "Instalaciones Sanitarias", description: "Mantenimiento y reparación de sistemas sanitarios, asegurando una operación confiable y sin fugas.", icon: "CloudArrowUpIcon" },
@@ -40,6 +41,7 @@ export const site = {
     {
       id: 2,
       title: "Sistemas Críticos y Seguridad Operativa",
+      image: "/boiler-room.jpg",
       desc: "Servicios orientados a mantener en funcionamiento los sistemas esenciales del edificio.",
       features: [
         { name: "Sistemas de Incendio", description: "Mantenimiento completo de detección y extinción para garantizar la seguridad y cumplir normativas.", icon: "CloudArrowUpIcon" },
@@ -55,6 +57,7 @@ export const site = {
     {
       id: 3,
       title: "Obras, Reformas y Remodelaciones",
+      image:"/obra.jpg",
       desc: "Soluciones de obra civil y terminación para mejorar, ampliar o renovar todo tipo de ambientes.",
       features: [
         { name: "Albañilería y Pintura", description: "Reparaciones, revestimientos y acabados de paredes, techos y estructuras.", icon: "CloudArrowUpIcon" },
@@ -70,6 +73,7 @@ export const site = {
     {
       id: 4,
       title: "Atención de Emergencias 24/7",
+      image: "/plumber.jpg",
       desc: "Respuesta inmediata ante fallas críticas que requieren intervención urgente.",
       features: [
         { name: "Emergencias Eléctricas", description: "Cortocircuitos, fallas de tableros, cortes repentinos y riesgos eléctricos.", icon: "CloudArrowUpIcon" },
@@ -83,9 +87,40 @@ export const site = {
     { id: 2, name: "Cliente B", quote: "Excelencia en atención y resultados." },
   ],
   specializations: [
-    { id: 1, title: "Airbnbs", slug: "airbnbs", desc: "Mantenimiento y host services para alquileres de corta estadía.", image: "/images/placeholder-1.jpg", link: "#" },
-    { id: 2, title: "Hoteles & Hostelería", slug: "hoteles-hosteleria", desc: "Servicios para cadenas y edificios hoteleros.", image: "/images/placeholder-2.jpg", link: "#" },
-    { id: 3, title: "Centros Comerciales", slug: "centros-comerciales", desc: "Mantenimiento integral a gran escala.", image: "/images/placeholder-3.jpg", link: "#" },
-    { id: 4, title: "Instituciones Educativas", slug: "instituciones-educativas", desc: "Programas de mantenimiento para colegios y universidades.", image: "/images/placeholder-4.jpg", link: "#" },
+    {
+      id: 1,
+      title: "Mantenimiento para Centros de Alta Concurrencia",
+      desc: "Orientado a centros comerciales, hospitales, aeropuertos, instituciones educativas y edificios corporativos con gran flujo de personas. Operaciones continuas, obras con mínima interferencia y cumplimiento estricto de plazos",
+      image: "/images/placeholder-1.jpg",
+      features: [
+        { name: "Modificaciones y adecuaciones de locales y espacios comunes", description: "Reformas, ampliaciones y adaptaciones sin cortar la operación general.", icon: "CloudArrowUpIcon" },
+        { name: "Trabajos fuera de horarios convencionales", description: "Minimizamos interrupciones realizando obras nocturnas o programadas.", icon: "LockClosedIcon" },
+        { name: "Programas de mantenimiento preventivo y correctivo", description: "Diseñados para mantener la infraestructura siempre segura y operativa.", icon: "ArrowPathIcon" },
+      ],
+    },
+    {
+      id: 2,
+      title: "Mantenimiento para Alojamientos Temporarios",
+      desc: "Brindamos un servicio pensado específicamente para propietarios y administradores de alquileres temporarios, asegurando que cada huésped viva una experiencia sin contratiempos. Tu propiedad siempre lista, sin sorpresas, mejorando tu reputación, reseñas y ocupación.",
+      image: "/images/placeholder-2.jpg",
+      features: [
+        { name: "Inspecciones de sistemas eléctricos", description: "Verificación de tableros, tomas, luminarias y protecciones.", icon: "CloudArrowUpIcon" },
+        { name: "Control de instalaciones sanitarias", description: "detección de fugas, presión de agua y correcto funcionamiento de artefactos.", icon: "LockClosedIcon" },
+        { name: "Reparaciones de uso frecuente", description: "Griferías, llaves, artefactos, filtraciones, accesorios y detalles que impactan en la experiencia del huésped.", icon: "ArrowPathIcon" },
+        { name: "Servicio programado o a demanda", description: "Chequeos periódicos para mantener la unidad siempre en perfecto estado y asistencia inmediata ante imprevistos o reclamos urgentes de huéspedes.", icon: "ArrowPathIcon" },
+     ],
+    },
+    {
+      id: 3,
+      title: "Mantenimiento para Hoteles",
+      desc: "Contamos con amplia experiencia en instalaciones hoteleras y brindamos apoyo técnico permanente o por temporada, adaptándonos al ritmo del establecimiento.",
+      image: "/LOGO.png",
+      features: [
+        { name: "Mantenimiento de áreas comunes", description: "Revisión y limpieza de fachadas, pasillos y plazas internas para seguridad y estética.", icon: "CloudArrowUpIcon" },
+        { name: "Soporte eléctrico y térmico", description: "Mantenimiento de tableros, iluminación y equipos HVAC de alta demanda.", icon: "LockClosedIcon" },
+        { name: "Gestión de incidencias", description: "Coordinación y reparación rápida de fallas que afecten el normal funcionamiento del centro.", icon: "ArrowPathIcon" },
+        { name: "Mantenimiento de ascensores y montacargas", description: "Planes de revisión y contratos de mantenimiento preventivo para equipos verticales.", icon: "FingerPrintIcon" },
+      ],
+    },
   ],
 };
