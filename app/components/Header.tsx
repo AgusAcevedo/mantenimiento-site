@@ -3,9 +3,8 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Image from "next/image";
 import type { MouseEvent } from "react";
-import { usePathname, useRouter } from "next/navigation";
-import { site } from "../data/site";
 
 function classNames(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ");
@@ -19,45 +18,21 @@ type NavigationItem = {
 };
 
 export default function Header() {
-  const pathname = usePathname();
-  const router = useRouter();
-
-  const handleNosotrosClick = (e: React.MouseEvent) => {
-    // try to close mobile menu (if open) by toggling the disclosure button
+  // Smooth-scroll helper for single-page navigation
+  const smoothScroll = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    // close mobile menu if open
     const btn = document.getElementById("main-menu-button");
-    if (pathname === "/") {
-      e.preventDefault();
-      const el = document.getElementById("sobre");
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-      // if mobile menu open, click button to close
-      if (btn && btn.getAttribute("aria-expanded") === "true") btn.click();
-      return;
-    }
-    e.preventDefault();
     if (btn && btn.getAttribute("aria-expanded") === "true") btn.click();
-    router.push("/#sobre");
-  };
-
-  const handleTestimoniosClick = (e: React.MouseEvent) => {
-    const btn = document.getElementById("main-menu-button");
-    if (pathname === "/") {
-      e.preventDefault();
-      const el = document.getElementById("testimonios");
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-      if (btn && btn.getAttribute("aria-expanded") === "true") btn.click();
-      return;
-    }
-    e.preventDefault();
-    if (btn && btn.getAttribute("aria-expanded") === "true") btn.click();
-    router.push("/#testimonios");
   };
 
   const navigation: NavigationItem[] = [
-    { name: "Servicios", href: "/servicios" },
-    { name: "Nosotros", href: "/#sobre", onClick: handleNosotrosClick },
-    { name: "Testimonios", href: "/#testimonios", onClick: handleTestimoniosClick },
-    { name: "Nos especializamos en", href: "/especializaciones" },
-    { name: "Contacto", href: "/#contacto", className: "bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700" },
+    { name: "Servicios", href: "/#servicios", onClick: (e) => { e.preventDefault(); smoothScroll('servicios'); } },
+    { name: "Nosotros", href: "/#sobre", onClick: (e) => { e.preventDefault(); smoothScroll('sobre'); } },
+    { name: "Testimonios", href: "/#testimonios", onClick: (e) => { e.preventDefault(); smoothScroll('testimonios'); } },
+    { name: "Nos especializamos en", href: "/#especializaciones", onClick: (e) => { e.preventDefault(); smoothScroll('especializaciones'); } },
+    { name: "Contacto", href: "/#contacto", onClick: (e) => { e.preventDefault(); smoothScroll('contacto'); }, className: "bg-blue-600 text-white px-4 py-2 sm:px-5 sm:py-3 rounded hover:bg-blue-700" },
   ];
 
   return (
@@ -65,7 +40,7 @@ export default function Header() {
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
+            <div className="relative flex h-16 sm:h-20 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <Disclosure.Button
                   id="main-menu-button"
@@ -80,12 +55,14 @@ export default function Header() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex shrink-0 items-center">
                   <Link href="/" className="flex items-center gap-2">
-                    <img
+                    <Image
                       alt="logo"
-                      src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                      className="h-8 w-auto"
+                      src="/logo_banner.png"
+                      width={56}
+                      height={56}
+                      className="h-10 sm:h-14 w-auto"
+                      priority
                     />
-                    <span className="font-semibold">{site.name}</span>
                   </Link>
                 </div>
 
@@ -99,7 +76,7 @@ export default function Header() {
                           onClick={item.onClick}
                           className={classNames(
                             item.className ?? "text-gray-700 hover:bg-gray-100 hover:text-gray-900",
-                            "rounded-md px-3 py-2 text-sm font-medium"
+                            "rounded-md px-4 py-2 sm:px-5 sm:py-3 text-sm sm:text-lg font-medium"
                           )}
                         >
                           {item.name}
@@ -140,7 +117,7 @@ export default function Header() {
                     onClick={item.onClick}
                     className={classNames(
                       item.className ?? "text-gray-700 hover:bg-gray-100 hover:text-gray-900",
-                      "block rounded-md px-3 py-2 text-base font-medium"
+                      "block rounded-md px-4 py-3 text-base font-medium"
                     )}
                   >
                     {item.name}
