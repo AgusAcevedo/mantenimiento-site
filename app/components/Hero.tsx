@@ -18,8 +18,7 @@ Diseño, proyecto y ejecución de instalaciones, más mantenimiento preventivo, 
 
       <div className="md:w-1/2">
         <div className="bg-gradient-to-br from-gray-100 to-white rounded-lg p-6 shadow-lg">
-          <div className="h-56 bg-gray-200 rounded-md flex items-center justify-center text-gray-400">Placeholder imagen</div>
-          <p className="text-sm text-gray-500 mt-3">Imagen representativa del servicio o equipo.</p>
+          <img src="/meeting.jpg" alt="Reunión de trabajo" className="w-full h-56 object-cover rounded-md" />
         </div>
       </div>
     </section>

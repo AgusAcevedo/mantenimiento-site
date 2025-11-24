@@ -91,7 +91,7 @@ export const site = {
       id: 1,
       title: "Mantenimiento para Centros de Alta Concurrencia",
       desc: "Orientado a centros comerciales, hospitales, aeropuertos, instituciones educativas y edificios corporativos con gran flujo de personas. Operaciones continuas, obras con mínima interferencia y cumplimiento estricto de plazos",
-      image: "/images/placeholder-1.jpg",
+      image: "/stairs.jpg",
       features: [
         { name: "Modificaciones y adecuaciones de locales y espacios comunes", description: "Reformas, ampliaciones y adaptaciones sin cortar la operación general.", icon: "CloudArrowUpIcon" },
         { name: "Trabajos fuera de horarios convencionales", description: "Minimizamos interrupciones realizando obras nocturnas o programadas.", icon: "LockClosedIcon" },
@@ -102,7 +102,7 @@ export const site = {
       id: 2,
       title: "Mantenimiento para Alojamientos Temporarios",
       desc: "Brindamos un servicio pensado específicamente para propietarios y administradores de alquileres temporarios, asegurando que cada huésped viva una experiencia sin contratiempos. Tu propiedad siempre lista, sin sorpresas, mejorando tu reputación, reseñas y ocupación.",
-      image: "/images/placeholder-2.jpg",
+      image: "/airbnb.jpg",
       features: [
         { name: "Inspecciones de sistemas eléctricos", description: "Verificación de tableros, tomas, luminarias y protecciones.", icon: "CloudArrowUpIcon" },
         { name: "Control de instalaciones sanitarias", description: "detección de fugas, presión de agua y correcto funcionamiento de artefactos.", icon: "LockClosedIcon" },
@@ -114,7 +114,7 @@ export const site = {
       id: 3,
       title: "Mantenimiento para Hoteles",
       desc: "Contamos con amplia experiencia en instalaciones hoteleras y brindamos apoyo técnico permanente o por temporada, adaptándonos al ritmo del establecimiento.",
-      image: "/LOGO.png",
+      image: "/architecture.jpg",
       features: [
         { name: "Mantenimiento de áreas comunes", description: "Revisión y limpieza de fachadas, pasillos y plazas internas para seguridad y estética.", icon: "CloudArrowUpIcon" },
         { name: "Soporte eléctrico y térmico", description: "Mantenimiento de tableros, iluminación y equipos HVAC de alta demanda.", icon: "LockClosedIcon" },
