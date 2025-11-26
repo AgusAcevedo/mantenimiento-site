@@ -1,7 +1,9 @@
 "use client";
 
 import React from 'react';
-import ItemWithModal, { Item } from './ItemWithModal';
+import ItemWithModal from './ItemWithModal';
+import type { Item } from '../data/site';
+
 export default function Services({ items }: { items: Item[] }) {
   if (!items || items.length === 0) return null;
 

@@ -1,12 +1,13 @@
 "use client";
 
 import { site } from "../data/site";
-import ItemWithModal, { Item } from "./ItemWithModal";
+import ItemWithModal from "./ItemWithModal";
+import type { Item } from "../data/site";
 
-export default function Specializations() {
-  const items = site.specializations || [];
+export default function Specializations({ items = site.specializations }: { items?: Item[] }) {
+  const list = items || [];
 
-  if (items.length === 0) return null;
+  if (list.length === 0) return null;
 
   return (
     <section id="especializaciones" className="py-12 bg-gray-50">
@@ -15,7 +16,7 @@ export default function Specializations() {
 
         {/* Responsive auto-fit grid like Services */}
         <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-6">
-          {items.map((it) => (
+          {list.map((it) => (
             <ItemWithModal key={it.id} item={it as Item} kind="spec" />
           ))}
         </div>

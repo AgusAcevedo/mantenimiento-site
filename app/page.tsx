@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800">
       <Hero />
-      <Services items={site.services} />
-      <Specializations />
+  <Services items={site.services} />
+  <Specializations items={site.specializations} />
       <About />
       <Testimonials items={site.testimonials} />
       <Contact />

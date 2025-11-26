@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+Allow: /
+
+# Point crawlers to our sitemap (replace with your production domain if different)
+Sitemap: https://iafa.vercel.app/sitemap.xml
+
+# If this is a pre-production/staging domain you do NOT want indexed, replace the contents with:
+# User-agent: *\n# Disallow: /

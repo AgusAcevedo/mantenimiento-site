@@ -1,4 +1,5 @@
 import { site } from "../data/site";
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -18,7 +19,17 @@ Diseño, proyecto y ejecución de instalaciones, más mantenimiento preventivo, 
 
       <div className="md:w-1/2">
         <div className="bg-gradient-to-br from-gray-100 to-white rounded-lg p-6 shadow-lg">
-          <img src="/meeting.jpg" alt="Reunión de trabajo" className="w-full h-56 object-cover rounded-md" />
+          <div className="relative w-full h-56 rounded-md overflow-hidden">
+            {/* Use explicit width/height + w-full h-full so Next/Image renders reliably on mobile */}
+            <Image
+              src="/meeting.jpg"
+              alt="Reunión de trabajo"
+              width={1200}
+              height={700}
+              priority
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
       </div>
     </section>

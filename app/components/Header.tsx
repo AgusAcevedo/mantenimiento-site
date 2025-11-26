@@ -1,9 +1,11 @@
 "use client";
 
 import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { MenuIcon } from './icons/MenuIcon'
+import { CloseIcon } from './icons/CloseIcon'
 import Link from "next/link";
 import Image from "next/image";
+import { site } from '../data/site'
 import type { MouseEvent } from "react";
 
 function classNames(...classes: Array<string | false | null | undefined>) {
@@ -47,8 +49,8 @@ export default function Header() {
                   className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500"
                 >
                   <span className="sr-only">Open main menu</span>
-                  <Bars3Icon aria-hidden="true" className={classNames("block h-6 w-6", open ? "hidden" : "block")} />
-                  <XMarkIcon aria-hidden="true" className={classNames("h-6 w-6", open ? "block" : "hidden")} />
+                  <MenuIcon aria-hidden="true" className={classNames("block h-6 w-6", open ? "hidden" : "block")} />
+                  <CloseIcon aria-hidden="true" className={classNames("h-6 w-6", open ? "block" : "hidden")} />
                 </Disclosure.Button>
               </div>
 
@@ -56,7 +58,7 @@ export default function Header() {
                 <div className="flex shrink-0 items-center">
                   <Link href="/" className="flex items-center gap-2">
                     <Image
-                      alt="logo"
+                      alt={`${site.name} logo`}
                       src="/logo_banner.png"
                       width={56}
                       height={56}

@@ -1,44 +1,36 @@
 "use client";
 
 import React from 'react';
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import Image from 'next/image';
+import { iconMap } from './icons'
+import type { Item, Feature } from '../data/site'
 
-export type Feature = { name: string; description: string; icon?: string };
-export type Item = { id: number; title: string; desc: string; image?: string; features?: Feature[] };
-
-const defaultFeatures = [
+const defaultFeatures: Feature[] = [
   {
-    name: 'Push to deploy',
+    name: 'Planificación y control',
     description:
-      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
-    icon: CloudArrowUpIcon,
+      'Coordinación de trabajos, asignación de recursos y cronogramas.',
+    icon: 'calendar',
   },
   {
-    name: 'SSL certificates',
+    name: 'Seguridad y cumplimiento',
     description:
-      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
-    icon: LockClosedIcon,
+      'Inspecciones y medidas para mantener la seguridad normativa.',
+    icon: 'shield',
   },
   {
-    name: 'Simple queues',
+    name: 'Sistemas y equipos',
     description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
-    icon: ArrowPathIcon,
+      'Mantenimiento de equipos críticos y sistemas de soporte.',
+    icon: 'gear',
   },
   {
-    name: 'Advanced security',
+    name: 'Soporte eléctrico',
     description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
-    icon: FingerPrintIcon,
+      'Asistencia en instalaciones eléctricas y generación.',
+    icon: 'bolt',
   },
 ]
-
-const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ArrowPathIcon,
-  FingerPrintIcon,
-};
 
 export default function ItemWithModal({ item, kind = 'item' }: { item: Item; kind?: string }) {
   const modalId = `modal-${kind}-${item.id}`;
@@ -65,8 +57,15 @@ export default function ItemWithModal({ item, kind = 'item' }: { item: Item; kin
     <>
       <article className="bg-white border rounded-lg overflow-hidden shadow-sm">
         {item.image ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={item.image} alt={item.title} className="w-full h-44 object-cover" />
+          <div className="relative w-full h-44">
+            <Image
+              src={item.image}
+              alt={item.title}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover"
+            />
+          </div>
         ) : (
           <div className="h-44 bg-gray-100 flex items-center justify-center text-gray-400">Imagen</div>
         )}
@@ -119,7 +118,8 @@ export default function ItemWithModal({ item, kind = 'item' }: { item: Item; kin
                 <dl className="grid w-full grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2 lg:gap-y-16">
                   {(item.features ?? []).length > 0 ? (
                     (item.features ?? []).map((feature) => {
-                      const Icon = feature.icon ? iconMap[feature.icon] ?? CloudArrowUpIcon : CloudArrowUpIcon;
+                      const lookup = (iconMap as Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>>)[feature.icon as string];
+                      const Icon = lookup ?? (iconMap as Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>>)["wrench"];
                       return (
                         <div key={feature.name} className="relative pl-16">
                           <dt className="text-base font-semibold text-gray-900">
@@ -133,17 +133,21 @@ export default function ItemWithModal({ item, kind = 'item' }: { item: Item; kin
                       );
                     })
                   ) : (
-                    defaultFeatures.map((feature) => (
-                      <div key={feature.name} className="relative pl-16">
-                        <dt className="text-base font-semibold text-gray-900">
-                          <div className="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                            <feature.icon aria-hidden="true" className="h-6 w-6 text-white" />
-                          </div>
-                          {feature.name}
-                        </dt>
-                        <dd className="mt-2 text-base text-gray-600">{feature.description}</dd>
-                      </div>
-                    ))
+                    defaultFeatures.map((feature) => {
+                      const lookup = (iconMap as Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>>)[feature.icon as string];
+                      const Icon = lookup ?? (iconMap as Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>>)["wrench"];
+                      return (
+                        <div key={feature.name} className="relative pl-16">
+                          <dt className="text-base font-semibold text-gray-900">
+                            <div className="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                              <Icon aria-hidden="true" className="h-6 w-6 text-white" />
+                            </div>
+                            {feature.name}
+                          </dt>
+                          <dd className="mt-2 text-base text-gray-600">{feature.description}</dd>
+                        </div>
+                      );
+                    })
                   )}
                 </dl>
 
