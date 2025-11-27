@@ -10,7 +10,7 @@ export default function Specializations({ items = site.specializations }: { item
   if (list.length === 0) return null;
 
   return (
-    <section id="especializaciones" className="py-12 bg-gray-50">
+  <section id="especializaciones" className="py-12 bg-gray-50 scroll-mt-12 sm:scroll-mt-16">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-2xl font-semibold mb-6">Nos especializamos en</h2>
 

@@ -1,7 +1,7 @@
 export default function Testimonials({ items }: { items: { id: number; name: string; quote: string }[] }) {
   if (!items || items.length === 0) return null;
   return (
-    <section id="testimonios" className="bg-gray-50 py-12">
+  <section id="testimonios" className="bg-gray-50 py-12 scroll-mt-12 sm:scroll-mt-16">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-2xl font-semibold mb-6">Testimonios</h2>
         <div className="grid md:grid-cols-2 gap-6">

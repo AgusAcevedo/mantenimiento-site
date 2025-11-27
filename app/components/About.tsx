@@ -3,8 +3,9 @@ import { site } from '../data/site';
 
 export default function About() {
   return (
-    <section id="sobre" className="max-w-6xl mx-auto px-6 py-12">
-      <div className="grid md:grid-cols-2 gap-8 items-center">
+  <section id="sobre" className="w-full bg-white scroll-mt-12 sm:scroll-mt-16">
+      <div className="max-w-6xl mx-auto px-6 py-12">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h2 className="text-2xl font-semibold mb-4">Sobre la empresa</h2>
           <p className="text-gray-600 mb-3">Somos una empresa dedicada al mantenimiento integral de instalaciones edilicias, brindando soluciones confiables en sistemas sanitarios, eléctricos, climatización, obra civil y atención de emergencias. Trabajamos con enfoque preventivo, respuesta rápida y un alto estándar de calidad para garantizar espacios seguros y plenamente funcionales.</p>
@@ -21,10 +22,11 @@ export default function About() {
               {/* Use a fixed aspect ratio so the frame and image scale together */}
               <div className="aspect-[16/9] w-full">
                 <div className="relative w-full h-full">
-                  <Image src="/logo_banner.png" alt={`${site.name} logo`} fill sizes="(max-width: 640px) 100vw, 40vw" className="object-contain" />
+                        <Image src="/logo_banner.png" alt={`${site.name} logo`} fill sizes="(max-width: 640px) 100vw, 40vw" className="object-contain rounded-lg" />
                 </div>
               </div>
             </div>
+        </div>
       </div>
     </section>
   );

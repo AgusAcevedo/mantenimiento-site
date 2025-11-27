@@ -13,7 +13,7 @@ export default function Home() {
   <Services items={site.services} />
   <Specializations items={site.specializations} />
       <About />
-      <Testimonials items={site.testimonials} />
+      {/* <Testimonials items={site.testimonials} /> */}
       <Contact />
     </main>
   );
