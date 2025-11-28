@@ -31,9 +31,9 @@ export default function Header() {
 
   const navigation: NavigationItem[] = [
     { name: "Servicios", href: "/#servicios", onClick: (e) => { e.preventDefault(); smoothScroll('servicios'); } },
+    { name: "Soluciones", href: "/#especializaciones", onClick: (e) => { e.preventDefault(); smoothScroll('especializaciones'); } },
     { name: "Nosotros", href: "/#sobre", onClick: (e) => { e.preventDefault(); smoothScroll('sobre'); } },
-    { name: "Testimonios", href: "/#testimonios", onClick: (e) => { e.preventDefault(); smoothScroll('testimonios'); } },
-    { name: "Nos especializamos en", href: "/#especializaciones", onClick: (e) => { e.preventDefault(); smoothScroll('especializaciones'); } },
+    // { name: "Testimonios", href: "/#testimonios", onClick: (e) => { e.preventDefault(); smoothScroll('testimonios'); } },
     { name: "Contacto", href: "/#contacto", onClick: (e) => { e.preventDefault(); smoothScroll('contacto'); }, className: "bg-blue-600 text-white px-4 py-2 sm:px-5 sm:py-3 rounded hover:bg-blue-700" },
   ];
 
