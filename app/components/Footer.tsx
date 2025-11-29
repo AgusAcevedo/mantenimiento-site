@@ -20,18 +20,13 @@ export default function Footer() {
                 </svg>
                 <span>Santiago, Chile</span>
               </li>
-              <li className="flex items-center gap-2">
-                <svg className="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
-                </svg>
-                <span>Montevideo, Uruguay</span>
-              </li>
             </ul>
           </div>
 
           <div className=" mt-4 md:mt-0 flex flex-col items-start text-left text-gray-600 md:pl-6 lg:pl-8">
-            <span><span className="font-semibold ">WhatsApp:</span> {site.phone}</span>
-            <span><span className="font-semibold ">Correo:</span> {site.email}</span>
+            <span><span className="font-semibold ">Tel (AR):</span> <a className="hover:underline text-gray-700" href={`tel:${site.phones.ar.replace(/[^\d+]/g, "")}`}>{site.phones.ar}</a></span>
+            <span><span className="font-semibold ">Tel (CL):</span> <a className="hover:underline text-gray-700" href={`tel:${site.phones.cl.replace(/[^\d+]/g, "")}`}>{site.phones.cl}</a></span>
+            <span className="mt-1"><span className="font-semibold ">Correo:</span> {site.email}</span>
           </div>
         </div>
 
