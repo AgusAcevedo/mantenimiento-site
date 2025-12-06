@@ -11,11 +11,19 @@ export default function Contact() {
         <div className="mt-4 md:mt-0 flex flex-col items-stretch md:items-center gap-3">
           <div className="flex flex-col md:flex-row w-full md:w-auto gap-3">
             <a
-              href={`mailto:${site.email}`}
-              aria-label="Enviar correo"
+              href={`mailto:${site.emails.ar}`}
+              aria-label="Enviar correo Argentina"
               className="bg-white text-blue-600 px-4 py-2 rounded-md font-medium hover:bg-blue-700 hover:text-white transition-colors w-full md:w-auto text-center"
             >
-              Enviar email
+              Enviar email AR
+            </a>
+
+            <a
+              href={`mailto:${site.emails.cl}`}
+              aria-label="Enviar correo Chile"
+              className="bg-white text-blue-600 px-4 py-2 rounded-md font-medium hover:bg-blue-700 hover:text-white transition-colors w-full md:w-auto text-center"
+            >
+              Enviar email CL
             </a>
 
             {/* WhatsApp Argentina */}

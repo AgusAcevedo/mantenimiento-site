@@ -14,6 +14,10 @@ export const site: {
     ar: string
     cl: string
   }
+  emails: {
+    ar: string
+    cl: string
+  }
   address: string
   url: string
   logo: string
@@ -28,7 +32,12 @@ export const site: {
   title: "IAFA - Soluciones Integrales de Mantenimiento para Edificios y Empresas",
   description: "IAFA ofrece servicios profesionales de mantenimiento preventivo y correctivo para instalaciones edilicias, sistemas críticos y obras civiles. Garantizamos seguridad, eficiencia y durabilidad en cada proyecto.",
   // --- SEO
-  email: "contacto@empresa.com",
+  // generic fallback email (kept for backwards compatibility)
+  email: "contacto.cl@iafacorp.com",
+  emails: {
+    ar: "contacto.ar@iafacorp.com",
+    cl: "contacto.cl@iafacorp.com",
+  },
   // Primary contact phone (kept for backwards compatibility) - prefer using `phones` below
   phone: "+54 9 11 2518 6253",
   // Country-specific phones (Argentina, Chile). Replace with your real numbers.
