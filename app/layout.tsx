@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FlowbiteInit from "./components/FlowbiteInit";
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -64,6 +65,7 @@ export default function RootLayout({
         <main className="pt-16 sm:pt-20 min-h-screen">{children}</main>
         <Footer />
         <FlowbiteInit />
+        <Analytics />
       </body>
     </html>
   );
