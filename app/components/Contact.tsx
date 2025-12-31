@@ -4,7 +4,7 @@ export default function Contact() {
   return (
   <section id="contacto" className="max-w-6xl mx-auto px-6 py-12 scroll-mt-12 sm:scroll-mt-16">
       <div className="bg-blue-600 text-white rounded-lg p-8 flex flex-col md:flex-row items-center justify-between">
-        <div>
+        <div className="text-center md:text-left">
           <h3 className="text-xl font-semibold">¿Listo para empezar?</h3>
           <p className="text-sm opacity-90">Contacta con nosotros para un presupuesto personalizado.</p>
         </div>
@@ -31,7 +31,7 @@ export default function Contact() {
               href={`https://wa.me/${site.phones.ar.replace(/\D/g, "")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-md font-medium flex items-center gap-2 transition-colors w-full md:w-auto justify-center"
+              className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-md font-medium flex items-center justify-center gap-2 transition-colors w-full md:w-auto text-center"
               aria-label="Contactar por WhatsApp Argentina"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -46,7 +46,7 @@ export default function Contact() {
               href={`https://wa.me/${site.phones.cl.replace(/\D/g, "")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-md font-medium flex items-center gap-2 transition-colors w-full md:w-auto justify-center"
+              className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-md font-medium flex items-center justify-center gap-2 transition-colors w-full md:w-auto text-center"
               aria-label="Contactar por WhatsApp Chile"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
