@@ -28,9 +28,9 @@ export const site: {
 } = {
   name: "IAFA",
   tagline: "soluciones integrales de mantenimiento",
-  // SEO title + description
-  title: "IAFA - Soluciones Integrales de Mantenimiento para Edificios y Empresas",
-  description: "IAFA ofrece servicios profesionales de mantenimiento preventivo y correctivo para instalaciones edilicias, sistemas críticos y obras civiles. Garantizamos seguridad, eficiencia y durabilidad en cada proyecto.",
+  // SEO title + description (optimizado: título <70 chars, descripción 150-160 chars)
+  title: "IAFA - Soluciones Integrales de Mantenimiento | Argentina y Chile",
+  description: "Servicios profesionales de mantenimiento preventivo y correctivo. Instalaciones sanitarias, eléctricas, HVAC y sistemas críticos. Cobertura en AR y CL.",
   // --- SEO
   // generic fallback email (kept for backwards compatibility)
   email: "contacto.cl@iafacorp.com",
