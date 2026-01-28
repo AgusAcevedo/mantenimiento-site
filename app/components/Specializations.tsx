@@ -10,9 +10,9 @@ export default function Specializations({ items = site.specializations }: { item
   if (list.length === 0) return null;
 
   return (
-  <section id="especializaciones" className="py-12 bg-gray-50 scroll-mt-12 sm:scroll-mt-16">
+  <section id="especializaciones" className="py-12 bg-gray-50 scroll-mt-12 sm:scroll-mt-16" aria-labelledby="especializaciones-heading">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-2xl font-semibold mb-6">Nos especializamos en</h2>
+        <h2 id="especializaciones-heading" className="text-2xl font-semibold mb-6">Nos especializamos en</h2>
 
         {/* Responsive auto-fit grid like Services */}
         <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-6">

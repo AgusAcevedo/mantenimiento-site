@@ -1,10 +1,19 @@
 User-agent: *
-Disallow: /api/
-Disallow: /_next/
 Allow: /
 
-# Point crawlers to our sitemap (replace with your production domain if different)
-Sitemap: https://iafa.vercel.app/sitemap.xml
+# Disallow admin or API routes if any
+Disallow: /api/
+Disallow: /_next/
 
-# If this is a pre-production/staging domain you do NOT want indexed, replace the contents with:
-# User-agent: *\n# Disallow: /
+# Point crawlers to our sitemap
+Sitemap: https://iafacorp.com/sitemap.xml
+
+# Crawl-delay for better server performance (optional)
+Crawl-delay: 1
+
+# Additional specific bot rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

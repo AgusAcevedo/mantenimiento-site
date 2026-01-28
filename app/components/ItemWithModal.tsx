@@ -55,9 +55,20 @@ export default function ItemWithModal({ item, kind = 'item' }: { item: Item; kin
 
   return (
     <>
-      <article className="bg-white border rounded-lg overflow-hidden shadow-sm">
+      <article 
+        className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-500 cursor-pointer group relative"
+        onClick={openModalFallback}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openModalFallback();
+          }
+        }}
+      >
         {item.image ? (
-          <div className="relative w-full h-44">
+          <div className="relative w-full h-44 group-hover:scale-105 transition-transform duration-500">
             <Image
               src={item.image}
               alt={item.title}
@@ -67,20 +78,18 @@ export default function ItemWithModal({ item, kind = 'item' }: { item: Item; kin
             />
           </div>
         ) : (
-          <div className="h-44 bg-gray-100 flex items-center justify-center text-gray-400">Imagen</div>
+          <div className="h-44 bg-gray-100 flex items-center justify-center text-gray-400 group-hover:scale-105 transition-transform duration-500">Imagen</div>
         )}
-        <div className="p-6">
-          <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-          <p className="text-sm text-gray-600">{item.desc}</p>
-          <button
-            type="button"
-            data-modal-target={modalId}
-            data-modal-toggle={modalId}
-            className="text-sm text-blue-600 mt-4 inline-block hover:underline"
-            onClick={openModalFallback}
-          >
-            Más info →
-          </button>
+        <div className="p-6 min-h-[180px] flex flex-col">
+          <h3 className="font-semibold text-lg mb-2 group-hover:text-indigo-600 transition-colors duration-500">{item.title}</h3>
+          <p className="text-sm text-gray-600 flex-grow">{item.desc}</p>
+          {/* Espacio reservado para "Más info" */}
+          <div className="h-12"></div>
+        </div>
+        
+        {/* Overlay con "Más info" que aparece en hover */}
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-indigo-600 via-indigo-600/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-16 flex items-center justify-center pointer-events-none">
+          <span className="text-white font-medium text-sm">Más info →</span>
         </div>
       </article>
 

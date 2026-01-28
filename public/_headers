@@ -1,0 +1,23 @@
+# Security Headers
+# https://nextjs.org/docs/advanced-features/security-headers
+
+# Strict-Transport-Security
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Cache control for static assets
+/favicon.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+/logo_banner.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Dynamic pages
+/*
+  X-Robots-Tag: index, follow

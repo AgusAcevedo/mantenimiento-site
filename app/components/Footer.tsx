@@ -2,7 +2,7 @@ import { site } from "../data/site";
 
 export default function Footer() {
   return (
-    <footer className="bg-white">
+    <footer className="bg-white" role="contentinfo" aria-label="Información de contacto y ubicación">
       <div className="max-w-6xl mx-auto px-6 py-6">
         <div className="text-sm text-gray-600">
           <h4 className="text-sm font-semibold mb-4 text-center">Operamos en:</h4>

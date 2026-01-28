@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://iafa.vercel.app/</loc>
+    <loc>https://iafacorp.com/</loc>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es-ar" href="https://iafacorp.com/" />
+    <xhtml:link rel="alternate" hreflang="es-cl" href="https://iafacorp.com/" />
   </url>
   <url>
-    <loc>https://iafa.vercel.app/#servicios</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://iafacorp.com/#servicios</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://iafacorp.com/#especializaciones</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://iafa.vercel.app/#especializaciones</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://iafacorp.com/#sobre</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://iafa.vercel.app/#contacto</loc>
+    <loc>https://iafacorp.com/#contacto</loc>
+    <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 </urlset>

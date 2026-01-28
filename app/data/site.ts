@@ -45,15 +45,15 @@ export const site: {
     ar: "+54 9 11 2518 6253",
     cl: "+56 9 3027 5672",
   },
-  address: "Calle Falsa 123, Ciudad",
-  // `NEXT_PUBLIC_SITE_URL` allows overriding the canonical URL per-environment (set this on Vercel to https://iafa.vercel.app)
+  address: "Buenos Aires, Argentina",
+  // `NEXT_PUBLIC_SITE_URL` allows overriding the canonical URL per-environment (set this on Vercel to https://iafacorp.com)
   // Fallback to localhost for local development.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://iafacorp.com',
   logo: "/logo_banner.png",
   sameAs: [
-    "https://www.facebook.com/yourpage",
-    "https://www.instagram.com/yourhandle",
-    "https://www.linkedin.com/company/yourcompany"
+    "https://www.facebook.com/iafacorp",
+    "https://www.instagram.com/iafacorp",
+    "https://www.linkedin.com/company/iafacorp"
   ],
   services: [
   // {

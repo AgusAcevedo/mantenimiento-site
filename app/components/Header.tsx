@@ -38,7 +38,7 @@ export default function Header() {
   ];
 
   return (
-    <Disclosure as="nav" className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-sm shadow-sm">
+    <Disclosure as="nav" className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-sm shadow-sm" aria-label="Navegación principal">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -47,6 +47,7 @@ export default function Header() {
                 <Disclosure.Button
                   id="main-menu-button"
                   className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500"
+                  aria-label="Abrir menú de navegación"
                 >
                   <span className="sr-only">Open main menu</span>
                   <MenuIcon aria-hidden="true" className={classNames("block h-6 w-6", open ? "hidden" : "block")} />
@@ -56,9 +57,9 @@ export default function Header() {
 
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex shrink-0 items-center">
-                  <Link href="/" className="flex items-center gap-2">
+                  <Link href="/" className="flex items-center gap-2" aria-label="Volver al inicio - IAFA">
                     <Image
-                      alt={`${site.name} logo`}
+                      alt={`Logo de ${site.name} - Soluciones Integrales de Mantenimiento`}
                       src="/logo_banner.png"
                       width={56}
                       height={56}
