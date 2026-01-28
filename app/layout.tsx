@@ -104,7 +104,7 @@ export const metadata: Metadata = {
     // creator: '@iafacorp',
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: 'V030pXdv9tl6ug47D-O9326ip_7Y2VW-fgb1M6gAGjU',
     // Add other verifications like Bing, Yandex when available
   },
   category: 'business',
