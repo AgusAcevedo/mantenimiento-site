@@ -53,8 +53,17 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#2563eb' },
+    ],
   },
   manifest: '/site.webmanifest',
   robots: {
@@ -78,9 +87,10 @@ export const metadata: Metadata = {
     description: site.description,
     images: [
       {
-        url: `${site.url}/og-image.png`,
-        width: 1200,
-        height: 630,
+        // TODO: Crear og-image.png (1200x630) para mejor presentación en redes sociales
+        url: `${site.url}/logo_banner.png`,
+        width: 800,
+        height: 400,
         alt: `${site.name} - ${site.tagline}`,
       },
     ],
@@ -89,8 +99,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: site.title,
     description: site.description,
-    images: [`${site.url}/og-image.png`],
-    creator: '@iafacorp',
+    images: [`${site.url}/logo_banner.png`],
+    // TODO: Agregar handle cuando esté activo
+    // creator: '@iafacorp',
   },
   verification: {
     google: 'your-google-verification-code',
@@ -133,7 +144,8 @@ export default function RootLayout({
               },
               "url": site.url,
               "logo": `${site.url}${site.logo}`,
-              "sameAs": site.sameAs,
+              // Descomentar cuando las redes sociales estén activas
+              // "sameAs": site.sameAs,
               "priceRange": "$$",
               "openingHoursSpecification": [
                 {

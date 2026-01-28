@@ -50,10 +50,11 @@ export const site: {
   // Fallback to localhost for local development.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://iafacorp.com',
   logo: "/logo_banner.png",
+  // TODO: Descomentar cuando las redes sociales estén activas
   sameAs: [
-    "https://www.facebook.com/iafacorp",
-    "https://www.instagram.com/iafacorp",
-    "https://www.linkedin.com/company/iafacorp"
+    // "https://www.facebook.com/iafacorp",
+    // "https://www.instagram.com/iafacorp",
+    // "https://www.linkedin.com/company/iafacorp"
   ],
   services: [
   // {
