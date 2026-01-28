@@ -29,7 +29,7 @@ export const site: {
   name: "IAFA",
   tagline: "soluciones integrales de mantenimiento",
   // SEO title + description (optimizado: título <70 chars, descripción 150-160 chars)
-  title: "IAFA - Soluciones Integrales de Mantenimiento | Argentina y Chile",
+  title: "IAFA - Soluciones Integrales de Mantenimiento",
   description: "Servicios profesionales de mantenimiento preventivo y correctivo. Instalaciones sanitarias, eléctricas, HVAC y sistemas críticos. Cobertura en AR y CL.",
   // --- SEO
   // generic fallback email (kept for backwards compatibility)
